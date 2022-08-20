@@ -5,6 +5,7 @@ const userServices = require('./user.http')
 
 router.get('/', userServices.getAll)
 
+
 router.route('/:id')
     .get(userServices.getById)
     .delete(userServices.remove)

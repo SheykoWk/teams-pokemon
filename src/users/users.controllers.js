@@ -47,7 +47,18 @@ const editUser = (id, data) => {
     }
 }
 
+const getUserByEmail = (email) => {
+    const data = userDB.filter(user => user.email === email)
+    return data.length ? data[0] : false
+}
+
+
 /*
+
+[{email: "sahid.kick@academlo.com"}].length
+[].length 
+
+
 [5, 4, 3, 3, 16]
 [4, 3, 3, 16]
 ? index:  arr.findIndex(item => item === 3) 2
@@ -60,6 +71,7 @@ module.exports = {
     getUserById,
     createUser,
     deleteUser,
-    editUser
+    editUser,
+    getUserByEmail
 }
 
