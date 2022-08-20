@@ -6,6 +6,7 @@ const app = express()
 app.use(express.json())
 
 app.get('/', (req, res) => {
+    console.log(req)
     res.status(200).json({message: 'Bienvenido a mi API de equipos pokemon'})
 })
 
