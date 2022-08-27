@@ -4,7 +4,12 @@ const uuid = require('uuid')
 //? Archivos importados
 const { hashPassword } = require('../utils/crypto')
 
-const userDB = [];
+const userDB = [{
+    id: 'a9c33907-6440-4cb8-a426-8764133a08c3',
+    name: "sahid",
+    email: "admin@admin.com",
+    password: "$2b$10$TNGcRFonQH98rVqFaBVfpOEEv2Xcu5ej14tWqKim3z3L6Tr.ZIaqC"
+}];
 
 const createUser = (data) => {
     const newUser = {

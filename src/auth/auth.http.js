@@ -8,7 +8,7 @@ const loginUser = (req, res) => {
     if(!data.email || !data.password){
         return res.status(400).json({message: 'Missing Data'})
     }
-
+    
     const response = authController.login(data.email, data.password)
 
     if(response){
